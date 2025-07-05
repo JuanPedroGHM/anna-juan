@@ -2,16 +2,15 @@ const translations = {
     en: {
         subtitle: "Join us for our wedding celebration",
         "date-location-title": "Date & Location",
-        date: "Date: July 18, 2025",
-        location: "Location: Rose Garden Venue, 123 Wedding Lane, City, Country",
+        date: "Date: 29 of August, 2025",
+        "ceremony-title": "Ceremony",
+        "ceremony-text": "We are excited to invite you to our wedding ceremony.",
+        "ceremony-time": "Time: 2:00 PM",
+        "ceremony-location": "Somewhere, who knows.",
         "dress-code-title": "Dress Code",
-        "dress-code-text": "Formal Attire - please wear pastel colors if possible.",
+        "dress-code-text": "Semi-formal beach attire.",
         "hotels-title": "Recommended Hotels",
-        hotel1: "Rose Hotel - 2 min walk from venue",
-        hotel2: "Garden Suites - 5 min drive",
-        hotel3: "City Center Inn - 10 min drive",
-        "rsvp-title": "RSVP",
-        "rsvp-text": "Please email your RSVP to <a href=\"mailto:wedding@example.com\">wedding@example.com</a> by June 15, 2025.",
+        hotel1: "Hotel Der Blaue Reiter - Close to the party venue. Use the code 'HUBRAUM2011' for a 10% discount.",
         "footer-text": "We can’t wait to celebrate with you! 💕"
     },
     es: {
@@ -69,14 +68,7 @@ $(function() {
         const lang = e.target.value;
         const selected = translations[lang];
         for (const id in selected) {
-            const el = document.getElementById(id);
-            if (el) {
-                if (id === 'rsvp-text') {
-                    el.innerHTML = selected[id];
-                } else {
-                    el.textContent = selected[id];
-                }
-            }
+            $(`#${id}`).text(selected[id]);
         }
     })
     $('#language-selector').change(); // Trigger change to set initial language
