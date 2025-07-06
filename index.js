@@ -91,8 +91,8 @@ $(function() {
         console.log('Language changed to:', this.value);
 
         const lang = e.target.value;
-        let stateObj = { lang: lang };
-        history.pushState(stateObj, "" + lang + "", "/#"+ lang) 
+        baseUrl = window.location.href.split('#')[0]; // Get the base URL without hash
+        window.location.href = baseUrl + '#' + lang; // Update the URL with the selected
 
         const selected = translations[lang];
         for (const id in selected) {
