@@ -91,11 +91,20 @@ $(function() {
         console.log('Language changed to:', this.value);
 
         const lang = e.target.value;
+        let stateObj = { lang: lang };
+        history.pushState(stateObj, "" + lang + "", "/#"+ lang) 
+
         const selected = translations[lang];
         for (const id in selected) {
             $(`#${id}`).html(selected[id]);
         }
     })
+    language = window.location.href.split('#')[1]; // Remove any hash from the URL
+    if (!language || !translations[language]) {
+        language = 'en'; // Default to English if no valid language is found
+    }
+    $('#language-selector').val(language); // Set the selector to the current language
+    console.log('Setting language to:', language);
     $('#language-selector').change(); // Trigger change to set initial language
 
 })
