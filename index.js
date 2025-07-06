@@ -1,12 +1,18 @@
 const translations = {
     en: {
-        subtitle: "Join us for our wedding celebration",
+        subtitle: "Join us for our wedding celebration in Karlsruhe, on the 29th of August, 2025!",
         "date-location-title": "Date & Location",
-        date: "Date: 29 of August, 2025",
-        "ceremony-title": "Ceremony",
-        "ceremony-text": "We are excited to invite you to our wedding ceremony.",
-        "ceremony-time": "Time: 2:00 PM",
-        "ceremony-location": "Somewhere, who knows.",
+        "welcome-title": "Welcome",
+        "welcome-text": "Dear guests, <br><br>We are happy to invite you to our wedding celebration and look forward to sharing our special day with you! Here you’ll find all the key details about the event, along with answers to common questions. <br>If you are unable to attend the party, please write us as soon as possible so we can coordinate with our venue. <br>We can’t wait to celebrate together!",
+        "date": "<strong>Timeplan</strong> <br><strong>14:00</strong>: Wedding ceremony at Haus Solms with an outdoor reception. Please note that only family members and their partners may enter the building, but everyone is warmly invited to join the reception outside. <br> <strong>16:00</strong>: Wedding party reception at HubRaum Durlach. <br> <strong>ca. 18:00</strong>: Dinner at HubRaum Durlach. <br> <strong>0:00 AM</strong>: End of the party. Self-organized after-party is possible :)",
+        "ceremony-title": "Wedding Ceremony",
+        "ceremony-text": "Our wedding ceremony will be held in the historic Haus Solms, located in the heart of Karlsruhe. The venue is easily accessible by public transport, with Mühlburger Tor and Durlacher Tor nearby. <br>Due to limited space, only family members and their partners can join us inside the ceremony room. However, we warmly invite everyone to a small outdoor reception with drinks and cake. The ceremony will be brief (under 30 minutes), after which we’ll gather in the garden to celebrate, chat, and take photos together. <br> After the ceremony, we will head to the party venue, HubRaum Karlsruhe. If you are traveling separately, you can take the direct S5 or S51 tram to the Durlach, Hubstraße station.",
+        "ceremony-time": "<strong>Time:</strong> 14:00",
+        "ceremony-location": "<strong>Location:</strong> Haus Solms, Bismarckstraße 24, 76133 Karlsruhe",
+        "party-title": "Wedding Party",
+        "party-text": "The wedding party will be held at HubRaum, a beach club nestled in a rural area between Karlsruhe and Durlach. We have reserved a private section of the beach for our celebration, complete with lounge chairs, beach games, and a relaxed atmosphere. We recommend wearing comfortable shoes that are easy to slip off if you’d like to enjoy the sand.",
+        "party-time": "<strong>Time:</strong> 16:00",
+        "party-location": "<strong>Location:</strong> HubRaum Karlsruhe, u. Hub 1, 76227 Karlsruhe",
         "dress-code-title": "Dress Code",
         "dress-code-text": "Semi-formal beach attire.",
         "hotels-title": "Recommended Hotels",
@@ -68,7 +74,7 @@ $(function() {
         const lang = e.target.value;
         const selected = translations[lang];
         for (const id in selected) {
-            $(`#${id}`).text(selected[id]);
+            $(`#${id}`).html(selected[id]);
         }
     })
     $('#language-selector').change(); // Trigger change to set initial language
