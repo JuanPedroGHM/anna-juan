@@ -38,6 +38,7 @@ section {
     background-color: #ffffff;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-sizing: border-box;
 }
 
 section h2 {
@@ -87,4 +88,59 @@ a:hover {
     max-width: 350px;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsive images and iframes */
+img, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive section and container */
+section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+    header {
+        padding: 1rem;
+    }
+    section {
+        margin: 1rem 0.5rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+    }
+    h1, h2 {
+        font-size: 1.2em;
+    }
+    #language-selector {
+        width: 100%;
+        font-size: 1em;
+    }
+    .photo-gallery {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .photo-gallery img {
+        width: 100%;
+        max-width: 100%;
+    }
+    iframe {
+        min-width: 0;
+        width: 100% !important;
+        height: 200px !important;
+    }
+    img {
+        max-width: 100%;
+    }
 }
